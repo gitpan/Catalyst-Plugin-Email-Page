@@ -1,0 +1,15 @@
+Build.PL
+Changes
+MANIFEST
+META.yml # Will be created by "make dist"
+Makefile.PL
+README
+lib/Catalyst/Plugin/Email/Page.pm
+t/00.load.t
+t/01.distribution.t
+t/02._construct_url.t
+t/03.email_page_url.t
+t/04.load_catalyst.t
+t/05.load_catalyst_request.t
+t/pod-coverage.t
+t/pod.t
