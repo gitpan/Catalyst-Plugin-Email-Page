@@ -1,4 +1,4 @@
-Catalyst-Plugin-Email-Page version 0.0.1
+Catalyst-Plugin-Email-Page version 0.2
 
 This is a simple plugin that lets a developer set and forget e-mail links in
 Catalyst
@@ -24,7 +24,7 @@ Alternatively, to install with Module::Build, you can use the following commands
 
 DEPENDENCIES
 
-Readonly and Catalyst
+Readonly, version and Catalyst
 
 
 COPYRIGHT AND LICENCE

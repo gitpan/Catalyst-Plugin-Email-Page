@@ -10,6 +10,9 @@ my $builder = Module::Build->new(
     requires => {
         'Test::More' => 0,
         'version'    => 0,
+        'Readonly'   => 0,
+        'Catalyst'   => 5.61,
+        'Catalyst::Request' => 0,
     },
     add_to_cleanup      => [ 'Catalyst-Plugin-Email-Page-*' ],
 );

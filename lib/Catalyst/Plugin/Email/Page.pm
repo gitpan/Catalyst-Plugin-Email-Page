@@ -1,6 +1,6 @@
 package Catalyst::Plugin::Email::Page;
 
-use version; $VERSION = qv('0.0.1');
+our $VERSION = '0.2';
 
 use warnings;
 use strict;
@@ -37,7 +37,7 @@ Catalyst::Plugin::Email::Page - Email your Catalyst page
 
 =head1 VERSION
 
-This document describes Catalyst::Plugin::Email::Page version 0.0.1
+This document describes Catalyst::Plugin::Email::Page version 0.2
 
 
 =head1 SYNOPSIS
@@ -94,7 +94,7 @@ link. See L<CONFIGURATION AND ENVIRONMENT>
 
 =head2 C<< Can't locate Readonly.pm in @INC (@INC contains: >>
 
-The only requirement outside of C<< Catalyst >> is L<Readonly>
+L<Readonly> is required
 
 Install it via the usual ways:
 
