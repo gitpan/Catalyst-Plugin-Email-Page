@@ -8,4 +8,8 @@ Revision history for Catalyst-Plugin-Email-Page
        - Updated docs
        - Changed version numbering to 0.x
          and stopped using 'version'
-       
+
+0.21 Jan 13 11:10:12 2006
+        - Removed "version" from Build.PL
+        and Makefile.PL
+        - Updated docs

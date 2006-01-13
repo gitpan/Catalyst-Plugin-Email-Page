@@ -1,6 +1,6 @@
 package Catalyst::Plugin::Email::Page;
 
-our $VERSION = '0.2';
+our $VERSION = '0.21';
 
 use warnings;
 use strict;
@@ -50,16 +50,13 @@ This document describes Catalyst::Plugin::Email::Page version 0.2
                    link_text = q{Report Page},
                 };
 
-    $c->stash->{email_page_url} = $c->email_page_url();
-     
     # In your Template
-    [% email_page_url %] 
+    [% c.email_page_url %] 
  
 
 =head1 DESCRIPTION
 
-This is a simple plugin that lets a developer set and forget e-mail links in
-Catalyst
+This is a simple plugin that lets a developer set and forget e-mail links in Catalyst
 
 =head1 INTERFACE 
 
@@ -159,7 +156,7 @@ Gavin Henry  C<< <ghenry@suretecsystems.com> >>
 
 =head1 LICENCE AND COPYRIGHT
 
-Copyright (c) 2005, Gavin Henry C<< <ghenry@suretecsystems.com> >>. All rights reserved.
+Copyright (c) 2006, Gavin Henry C<< <ghenry@suretecsystems.com> >>. All rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself. See L<perlartistic>.

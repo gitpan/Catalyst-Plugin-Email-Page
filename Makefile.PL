@@ -10,7 +10,6 @@ WriteMakefile(
     PL_FILES            => {},
     PREREQ_PM => {
         'Test::More' => 0,
-        'version'    => 0,
         'Readonly'   => 0,
         'Catalyst'   => 5.61,
         'Catalyst::Request' => 0,

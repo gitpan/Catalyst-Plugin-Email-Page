@@ -9,7 +9,6 @@ my $builder = Module::Build->new(
     dist_version_from   => 'lib/Catalyst/Plugin/Email/Page.pm',
     requires => {
         'Test::More' => 0,
-        'version'    => 0,
         'Readonly'   => 0,
         'Catalyst'   => 5.61,
         'Catalyst::Request' => 0,
