@@ -1,19 +1,28 @@
 use strict;
 use warnings;
-use ExtUtils::MakeMaker;
 
-WriteMakefile(
-    NAME                => 'Catalyst::Plugin::Email::Page',
-    AUTHOR              => 'Gavin Henry <ghenry@suretecsystems.com>',
-    VERSION_FROM        => 'lib/Catalyst/Plugin/Email/Page.pm',
-    ABSTRACT_FROM       => 'lib/Catalyst/Plugin/Email/Page.pm',
-    PL_FILES            => {},
-    PREREQ_PM => {
-        'Test::More' => 0,
-        'Readonly'   => 0,
-        'Catalyst'   => 5.61,
-        'Catalyst::Request' => 0,
-    },
-    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean               => { FILES => 'Catalyst-Plugin-Email-Page-*' },
-);
+# Load the Module::Install bundled in ./inc/
+use inc::Module::Install;
+
+# Name of your distribution
+name            'Catalyst-Plugin-Email-Page';
+
+# Get most of the details from the primary module
+# (The filename argument below is optional if it is placed
+# consistently with the "name" above.)
+all_from        'lib/Catalyst/Plugin/Email/Page.pm';
+
+requires        'Readonly'           => 0;
+requires        'Catalyst'           => '5.61';
+requires        'Catalyst::Request'  => '0';
+    
+build_requires  'Test::More'         => '0.42';
+build_requires  'Test::Distribution' => '0';
+    
+# Auto-install all dependencies from CPAN
+auto_install;
+    
+sign;
+
+# Generate the Makefile
+WriteAll;

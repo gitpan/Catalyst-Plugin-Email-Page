@@ -1,11 +1,11 @@
 package Catalyst::Plugin::Email::Page;
 
-our $VERSION = '0.21';
-
 use warnings;
 use strict;
 use Catalyst::Request;
 use Readonly;
+
+our $VERSION = '0.22';
 
 Readonly my $address => q{webmaster@example.com};
 Readonly my $subject => q{User%20Report%20for};
