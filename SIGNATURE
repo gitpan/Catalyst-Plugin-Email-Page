@@ -15,12 +15,12 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 12be514ea0aa1cfec8c5f39f8da7221d5e18b62a Build.PL
-SHA1 51467ac15bd4a79fc96acfdcaeea9aa7b85c861c Changes
+SHA1 be65aa674a8c0176f1b70fb030b65bdfcc3538c6 Changes
 SHA1 4c779f1c86d990770179552833782104b36e7db8 MANIFEST
 SHA1 c87154580248fba54cdee0477bf82516b4878b18 MANIFEST.SKIP
 SHA1 a85e0e9f3d490d053c056f5aa45a1b871c088422 META.yml
 SHA1 4f02441df9adc6849e9fa7a4af52d196a7e96369 Makefile.PL
-SHA1 651ab852331a7c133fdaa56963840b628eee3cd0 README
+SHA1 c416b1a825677938db5ba83e143bf6ae3bb5b4d7 README
 SHA1 7c4c900481d5d3d8c979999d11be84f8ade56cdb inc/Module/AutoInstall.pm
 SHA1 2039e2dd226b0ca238a74b3be27b96943424a872 inc/Module/Install.pm
 SHA1 e33c1c7fbdbf1d8fbf81cd162e395c1962909ae6 inc/Module/Install/AutoInstall.pm
@@ -33,7 +33,7 @@ SHA1 a9cbcdaba2b3be67367dd17d8488491bac59b729 inc/Module/Install/Makefile.pm
 SHA1 37c17131ee91e8cd845acdfc3d3a030b1f2f051e inc/Module/Install/Metadata.pm
 SHA1 e9755612a43199453c11e2294b2356035b0b56bc inc/Module/Install/Win32.pm
 SHA1 f30594ff3f41c1c6cac2d2da85ba95d61eeea692 inc/Module/Install/WriteAll.pm
-SHA1 bf68c846d94555c3cad34958d63eff9151af5620 lib/Catalyst/Plugin/Email/Page.pm
+SHA1 78fb0d00aa0ef1732299fdb01c64de1d3d6ea352 lib/Catalyst/Plugin/Email/Page.pm
 SHA1 76b395074c1bba2d4e729e674423a5b2c22dce70 t/00.load.t
 SHA1 5d3755101af2cc50d9b7a4baaebd15baeedcfbb4 t/01.distribution.t
 SHA1 3896648641ebc8b9f4034eb334c77e2b68720753 t/02._construct_url.t
@@ -45,7 +45,7 @@ SHA1 0190346d7072d458c8a10a45c19f86db641dcc48 t/pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFDy5UgeWseh9tzvqgRAoc7AKCMZ428Dytd6ixjZ8lz1QjxH1ABtgCeMSjh
-ES5a5dxizIlpMcLL1I9iW4o=
-=y47/
+iD8DBQFDzN99eWseh9tzvqgRAkhtAJ9p5kc5CyoYFuMrdLMhX5VBJl8PGwCeLaRl
+EI/Cn6hcuLCelFA/MjHfZNQ=
+=ceV7
 -----END PGP SIGNATURE-----

@@ -16,3 +16,6 @@ Revision history for Catalyst-Plugin-Email-Page
 
 0.22 Jan 16 11:20:10 2006
         - Switched to Module::Install
+
+0.23 Jan 17 12:03:55 2006
+        - Updated docs

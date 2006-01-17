@@ -5,7 +5,7 @@ use strict;
 use Catalyst::Request;
 use Readonly;
 
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 
 Readonly my $address => q{webmaster@example.com};
 Readonly my $subject => q{User%20Report%20for};
@@ -21,7 +21,7 @@ sub _construct_url {
 
 sub email_page_url {
     my $c          = shift;
-    my $link       = _construct_url($c);
+    my $link       = $c->_construct_url;
     my $link_text  = $c->config->{email_page}{link_text} || $text;
     my $email_link = "<a href=\"$link\">$link_text</a>";
     return $email_link;
@@ -37,7 +37,7 @@ Catalyst::Plugin::Email::Page - Email your Catalyst page
 
 =head1 VERSION
 
-This document describes Catalyst::Plugin::Email::Page version 0.2
+This document describes Catalyst::Plugin::Email::Page version 0.23
 
 
 =head1 SYNOPSIS
