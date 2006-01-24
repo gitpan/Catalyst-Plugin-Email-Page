@@ -1,7 +1,6 @@
-Catalyst-Plugin-Email-Page version 0.23
+Catalyst-Plugin-Email-Page version 0.24
 
-This is a simple plugin that lets a developer set and forget e-mail links in
-Catalyst
+This is a simple plugin that lets a developer set and forget e-mail links in Catalyst
 
 INSTALLATION
 

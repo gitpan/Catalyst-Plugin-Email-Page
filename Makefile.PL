@@ -13,10 +13,10 @@ name            'Catalyst-Plugin-Email-Page';
 all_from        'lib/Catalyst/Plugin/Email/Page.pm';
 
 requires        'Readonly'           => 0;
-requires        'Catalyst'           => '5.61';
+requires        'Catalyst'           => '5.63';
 requires        'Catalyst::Request'  => '0';
     
-build_requires  'Test::More'         => '0.42';
+build_requires  'Test::More'         => '0.62';
 build_requires  'Test::Distribution' => '0';
     
 # Auto-install all dependencies from CPAN

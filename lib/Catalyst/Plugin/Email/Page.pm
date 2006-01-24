@@ -5,7 +5,7 @@ use strict;
 use Catalyst::Request;
 use Readonly;
 
-our $VERSION = '0.23';
+our $VERSION = '0.24';
 
 Readonly my $address => q{webmaster@example.com};
 Readonly my $subject => q{User%20Report%20for};
@@ -37,7 +37,7 @@ Catalyst::Plugin::Email::Page - Email your Catalyst page
 
 =head1 VERSION
 
-This document describes Catalyst::Plugin::Email::Page version 0.23
+This document describes Catalyst::Plugin::Email::Page version 0.24
 
 
 =head1 SYNOPSIS
