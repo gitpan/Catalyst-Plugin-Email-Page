@@ -4,26 +4,32 @@ use warnings;
 use strict;
 use Catalyst::Request;
 use Readonly;
+use URI::Escape qw( uri_escape_utf8 );
 
-our $VERSION = '0.24';
+our $VERSION = '0.25';
 
 Readonly my $address => q{webmaster@example.com};
-Readonly my $subject => q{User%20Report%20for};
+Readonly my $subject => q{User Report for};
 Readonly my $text    => q{Report Page};
 
 sub _construct_url {
-    my $c             = shift;
-    my $page          = $c->request->uri;
-    my $email_add     = $c->config->{email_page}{email} || $address;
-    my $email_subject = $c->config->{email_page}{subject} || $subject;
-    return "mailto:$email_add?subject=$email_subject $page";
+    my $c = shift;
+    my $page            = $c->request->uri;
+    my $email_add       = $c->config->{email_page}{email} || $address;
+    my $email_subject   = $c->config->{email_page}{subject} || $subject;
+  
+    # Only mailto subject needs to be escaped
+    my $mailto_subject  = uri_escape_utf8( "$email_subject $page" );
+    
+    return "mailto:$email_add?subject=$mailto_subject";
 }
 
 sub email_page_url {
-    my $c          = shift;
+    my $c = shift;
     my $link       = $c->_construct_url;
     my $link_text  = $c->config->{email_page}{link_text} || $text;
     my $email_link = "<a href=\"$link\">$link_text</a>";
+    
     return $email_link;
 }
 
@@ -34,10 +40,9 @@ __END__
 
 Catalyst::Plugin::Email::Page - Email your Catalyst page
 
-
 =head1 VERSION
 
-This document describes Catalyst::Plugin::Email::Page version 0.24
+This document describes Catalyst::Plugin::Email::Page version 0.25
 
 
 =head1 SYNOPSIS
@@ -52,7 +57,6 @@ This document describes Catalyst::Plugin::Email::Page version 0.24
 
     # In your Template
     [% c.email_page_url %] 
- 
 
 =head1 DESCRIPTION
 
@@ -63,20 +67,21 @@ This is a simple plugin that lets a developer set and forget e-mail links in Cat
 =head2 email_page_url
 
 Returns a link in the form of:
-mailto:webmaster@example.com?subject=User%20Report%20for http://yours.com/ 
+mailto:webmaster@example.com?subject=User Report for http://yours.com/ 
 
-Where http://yours.com/ is the pages uri
+The mailto subject is escaped using C<< uri_escape_utf8 >> from
+L<URI::Escape> and http://yours.com/ is the current pages uri
 
 =head2 email_page_body
 
 Allows you to e-mail the whole page to someone once you have the right
-template. Used the same way as C<< email_page_link >>
-    
+template. Used the same way as L<email_page_url>
+
 To do.
 
 =head2 email_page_anchor
 
-Allows you to e-mail a page anchor. Used the same way as C<< email_page_link >>
+Allows you to e-mail a page anchor. Used the same way as L<email_page_url>
 
 To do.
 
@@ -98,8 +103,12 @@ Install it via the usual ways:
     cpan Readonly
     perl -MCPAN -e shell
 
+=head2 C<< Can't locate URI/Escape.pm in @INC (@INC contains: >>
+
+L<URI::Escape> is required. See above for standard way to install
+
 =head1 CONFIGURATION AND ENVIRONMENT
- 
+
 Catalyst::Plugin::Email::Page requires no configuration files or environment
 variables, but you'd best change the C<< mailto >> address.
 
@@ -126,7 +135,7 @@ Settings in Config.yml
 
 =head1 DEPENDENCIES
 
-Just L<Readonly> and of course L<Catalyst>
+L<Readonly>, L<URI::Escape> and of course L<Catalyst>
 
 =head1 INCOMPATIBILITIES
 
@@ -134,7 +143,12 @@ None reported.
 
 =head1 BUGS AND LIMITATIONS
 
-No bugs have been reported.
+Initial Bug ID 17248, as reported by CPAN ID DAKKAR
+
+Fixed in version 0.25, which now escapes the mailto subject,
+hence the L<URI::Escape> requirement.
+
+Thanks DAKKAR.
 
 Please report any bugs or feature requests to
 C<bug-catalyst-plugin-email-page@rt.cpan.org>, or through the web interface at

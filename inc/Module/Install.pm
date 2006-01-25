@@ -1,4 +1,4 @@
-#line 1 "/export/office_files/projects/suretec/suretec-website/branches/catalyst-plugins/Catalyst-Plugin-Email-Page/inc/Module/Install.pm - /usr/lib/perl5/site_perl/5.8.6/Module/Install.pm"
+#line 1 "/home/ghenry/myperlcode/suretec/suretec-website/branches/catalyst-plugins/Catalyst-Plugin-Email-Page/inc/Module/Install.pm - /usr/lib/perl5/site_perl/5.8.6/Module/Install.pm"
 package Module::Install;
 
 use 5.004;
