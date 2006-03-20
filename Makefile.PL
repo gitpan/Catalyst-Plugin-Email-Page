@@ -13,7 +13,7 @@ name            'Catalyst-Plugin-Email-Page';
 all_from        'lib/Catalyst/Plugin/Email/Page.pm';
 
 requires        'Readonly'           => 0;
-requires        'Catalyst'           => '5.63';
+requires        'Catalyst'           => '5.66';
 requires        'Catalyst::Request'  => '0';
 requires        'URI::Escape'        => '3.28';
 

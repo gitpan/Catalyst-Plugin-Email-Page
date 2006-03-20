@@ -6,7 +6,7 @@ use Catalyst::Request;
 use Readonly;
 use URI::Escape qw( uri_escape_utf8 );
 
-our $VERSION = '0.25';
+our $VERSION = '0.26';
 
 Readonly my $address => q{webmaster@example.com};
 Readonly my $subject => q{User Report for};
@@ -42,7 +42,7 @@ Catalyst::Plugin::Email::Page - Email your Catalyst page
 
 =head1 VERSION
 
-This document describes Catalyst::Plugin::Email::Page version 0.25
+This document describes Catalyst::Plugin::Email::Page version 0.26
 
 
 =head1 SYNOPSIS
@@ -75,13 +75,13 @@ L<URI::Escape> and http://yours.com/ is the current pages uri
 =head2 email_page_body
 
 Allows you to e-mail the whole page to someone once you have the right
-template. Used the same way as L<email_page_url>
+template. Used the same way as C<< email_page_url >>
 
 To do.
 
 =head2 email_page_anchor
 
-Allows you to e-mail a page anchor. Used the same way as L<email_page_url>
+Allows you to e-mail a page anchor. Used the same way as C<< email_page_url >>
 
 To do.
 

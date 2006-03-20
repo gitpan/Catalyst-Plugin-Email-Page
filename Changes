@@ -1,5 +1,9 @@
 Revision history for Catalyst-Plugin-Email-Page
 
+0.26 Mar 20 2006
+        - Upgrading Module::Install and Catalyst 
+          requirement.
+
 0.25 Jan 25 2006
         - Fixed CPAN Bug ID 17248
         - URI::Escape for mailto subject 
